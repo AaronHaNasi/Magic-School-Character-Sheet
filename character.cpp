@@ -1,5 +1,5 @@
 # include "character.h"
-
+// TODO find all stats that when <=0 and <0 result in character 'death'
 character::character() {
 }
 character::character(string n, int y, string camp, int h, int cb, int lb,
@@ -26,11 +26,50 @@ character::setOrganization(string o) {
 character::setCampaign(string camp) {
 	campaign = camp; 
 }
-character::setHarThresholdm(int h) {
-	harm = h;
+character::setHarmThreshold(int h) {
+	harmThreshold = h;
+	if(harmThreshold <= 0) {
+	    setStatus(false);
+	}
 }
 character::setCurrentHarm(int h) {
 	currentHarm = h;
+}
+character::setHeat(int ht) {
+	heat = ht; 
+}
+character::setWillpower(int w) {
+	willpower = w;
+	if(willpower <= 0) {
+	    setStatus(false);
+	}
+}
+character::setFavor(int f) {
+	favor = f;
+}
+character::setCores(int c) {
+	cores = c;
+}
+character::setStressThreshold(int st){
+	stressThreshold = st;
+	if(stressThreshold <= 0) {
+	    setStatus(false);
+	}
+}
+character::setCurrentStress(int cs) {
+	currentStress = cs;
+}
+character::setMentalHarmThreshold(int mht) {
+	mentalHarmThreshold = mht;
+}
+character::setSpiritualHarmThreshold(int spht) {
+	spiritualHarmThreshold = spht; 
+}
+character::setCurrentMentalHarm(int cmh) {
+	currentMentalHarm = cmh;
+}
+character::setCurrentSpiritualHarm(int csh {
+		currentSpiritualHarm = csh;		
 }
 character::setCombatBonus(int cb) {
 	combatBonus = cb;
@@ -73,6 +112,10 @@ character::setReinforcedArmor(int ra) {
 }
 character::setMundaneArmor(int mua) {
 	mundaneArmor = mua;
+}
+character::setStatus(bool alive)
+{
+    isAlive = alive;
 }
 
 

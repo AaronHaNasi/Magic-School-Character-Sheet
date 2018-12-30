@@ -1,103 +1,132 @@
 #include <string> 
 #include <vector>
+#ifndef CHARACTER_h
+#define CHARACTER_H
 using namespace std;
 
 class character {
-	//general character information
-	private string name; 
-	private int year; 
-	private string organization; 
-	private string campaign; 
+private:
+    //general character information
+    string name; 
+    int year; 
+	string organization; 
+	string campaign; 
 	// moving stats
-	private int harmThreshold;
-	private int currentHarm;
-	private int heat;
-	private int willpower;
-	private int favor;
-	private int cores;
-	private int stressThreshold;
-	private int currentStress;
-	private int mentalHarmThreshold;
-	private int spiritualHarmThreshold;
-	private int currentMentalHarm;
-	private int currentSpiritualHarm;
+	int harmThreshold;
+	int currentHarm;
+	int heat;
+	int willpower;
+	int favor;
+	int cores;
+	int stressThreshold;
+	int currentStress;
+	int mentalHarmThreshold;
+	int spiritualHarmThreshold;
+	int currentMentalHarm;
+	int currentSpiritualHarm;
 	// bonuses
-	private int combatBonus;
-	private int learningBonus;
+	int combatBonus;
+	int learningBonus;
 	// character stats
-	private int stre;
-	private int perc;
-	private int endu;
-	private int chari;
-	private int inte;
-	private int agil;
-	private int luck; 
+	int stre;
+	int perc;
+	int endu;
+	int chari;
+	int inte;
+	int agil;
+	int luck; 
 	// vectors to hold skills depending on their level
-	//private vector<string> beyondPerfectSkills;
-	//private vector<string> perfectSkills;
-	//private vector<string> masterSkills;
-	//private vector<string> excellentSkills;
-	//private vector<string> greatSkills;
-	//private vector<string> goodSkills;
-	//private vector<string> okSkills; 
+	// vector<string> beyondPerfectSkills;
+	// vector<string> perfectSkills;
+	// vector<string> masterSkills;
+	// vector<string> excellentSkills;
+	// vector<string> greatSkills;
+	// vector<string> goodSkills;
+	// vector<string> okSkills; 
 	// stats to hold armor 
-	private int epicArmor;
-	private int divineArmor;
-	private int magicArmor; 
-	private int reinforcedArmor;
-	private int mundaneArmor; 
+	int epicArmor;
+	int divineArmor;
+	int magicArmor; 
+	int reinforcedArmor;
+	int mundaneArmor; 
+	bool isAlive; // Refers to whether the character is currently playable. Character can be undead but still be playable,
+	                // but can be insane and unplayable
 	//constructors
-	character();
+public:	
+    character();
 	character(string, int, string, int, int, int, int, int, int, int, int, 
 			int, int);
 	character(string, int, string, string, int, int, int, int, int, int,
 		       	int, int, int);	
 	// setter functions
 	
-	public void setName(string);
-	public void setYear(int);
-	public void setOrganization(string);
-	public void setCampaign(string);
-	public void setHarmThreshold(int);
-	public void setCurrentHarm(int)p;
-	public void setCombatBonus(int);
-	public void setLearningBonus(int);
-	public void setStrength(int);
-	public void setPerception(int);
-	public void setEndurance(int);
-	public void setCharisma(int);
-	public void setIntelligence(int);
-	public void setAgility(int);
-	public void setLuck(int);
-	public void setEpicArmor(int);
-	public void setDivineArmor(int);
-	public void setMagicArmor(int);
-	public void setReinforcedArmor(int);
-	public void setMundaneArmor(int);
+	void setName(string);
+	void setYear(int);
+	void setOrganization(string);
+	void setCampaign(string);
+	void setHarmThreshold(int);
+	void setCurrentHarm(int);
+	void setHeat(int);
+	void setWillpower(int);
+	void setFavor(int);
+	void setCores(int); 
+	void setStressThreshold(int);
+	void setCurrentStress(int);
+	void setMentalHarmThreshold(int);
+	void setSpiritualHarmThreshold(int);
+	void setCurrentMentalHarm(int);
+	void setCurrentSpiritualHarm(int);
+	void setCombatBonus(int);
+	void setLearningBonus(int);
+	void setStrength(int);
+	void setPerception(int);
+	void setEndurance(int);
+	void setCharisma(int);
+	void setIntelligence(int);
+	void setAgility(int);
+	void setLuck(int);
+	void setEpicArmor(int);
+	void setDivineArmor(int);
+	void setMagicArmor(int);
+	void setReinforcedArmor(int);
+	void setMundaneArmor(int);
+	void setStatus(bool); // sets whether character is 'alive'
 	
 	//getter functions
-	public string getName() const;
-	public int getYear() const; 
-	public string getOrganization() const; 
-	public string getCampaign() const;
-	public unsigned int getHarm() const; 
-	public int getCombatBonus() const; 
-	public int getLearningBonus() const; 
-	public int getStrength() const; 
-	public int getPerception() const; 
-	public int getEndurance() const;
-	public int getCharisma() const;
-	public int getIntelligence const;
-	public int getAgility const; 
-	public int getLuck const;
-	public unsigned int getEpicArmor() const;
-	public unsigned int getDivineArmor() const; 
-	public unsigned int getMagicArmor() const;
-	public unsigned int getReinforcedArmor() const;
-	public unsigned int getMundaneArmor() const; 
-
+	string getName() { return name; }
+	int getYear() { return year; }
+	string getOrganization() { return organization; }
+	string getCampaign() { return campaign; }
+	unsigned int getHarmThreshold() { return harmThreshold; }
+	unsigned int getCurrentHarm() { return currentHarm; }
+	unsigned int getHeat() { return heat; }
+	int getWillpower() { return willpower; }
+	int getFavor() { return favor; }
+	unsigned int getCores() { return cores; }
+	int getStressThreshold() { return stressThreshold; }
+	int getCurrentStress() { return currentStress; }
+	int getMentalHarmThreshold() { return mentalHarmThreshold; }
+	int getSpiritualHarmThreshold() { return spiritualHarmThreshold; }
+	unsigned int getCurrentMentalHarm() { return currentMentalHarm; }
+	unsigned int getCurrentSpiritualHarm() { return currentSpiritualHarm; }
+	// TODO find out if you can have negative favor, and what happens when you do
+	int getCombatBonus() { return combatBonus; }
+	int getLearningBonus() { return learningBonus; }
+	int getStrength() { return stre; }
+	int getPerception() { return perc; }
+	int getEndurance() { return endu; }
+	int getCharisma() { return chari; }
+	int getIntelligence { return inte;}
+	int getAgility { return agil;}
+	int getLuck { return luck; }
+	unsigned int getEpicArmor() { return epicArmor; }
+	unsigned int getDivineArmor() { return divineArmor; }
+	unsigned int getMagicArmor() { return magicArmor; }
+	unsigned int getReinforcedArmor() { return reinforcedArmor; }
+	unsigned int getMundaneArmor() { return mundaneArmor; }
+    bool getStatus() { return isAlive; }
 	// class to add skills to vectors
-	//public void addSkill
+	// void addSkill
 		
 }
 
