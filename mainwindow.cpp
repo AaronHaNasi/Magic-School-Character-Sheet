@@ -3,13 +3,13 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QTextStream>
-#include "character.h"
-#include "geomancyCores.h"
-#include "item.h"
-#include "skill.h"
-#include "spell.h"
+//#include "character.h"
+//#include "geomancyCores.h"
+//#include "item.h"
+//#include "skill.h"
+//#include "spell.h"
 #include <stdlib.h>
-
+#include "json.hpp"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -48,6 +48,20 @@ void MainWindow::on_actionNew_Character_triggered()
     ui->WillpowerField->setText(QString("10"));
     ui->HeatField->setText(QString("0"));
     ui->FavorField->setText(QString("0"));
+    ui->StrField->setValue(1);
+    ui->PerField->setValue(1);
+    ui->EndField->setValue(1);
+    ui->ChaField->setValue(1);
+    ui->IntField->setValue(1);
+    ui->AgiField->setValue(1);
+    ui->LucField->setValue(1);
+    ui->StrBaseField->setValue(1);
+    ui->PerBaseField->setValue(1);
+    ui->EndBaseField->setValue(1);
+    ui->ChaBaseField->setValue(1);
+    ui->IntBaseField->setValue(1);
+    ui->AgiBaseField->setValue(1);
+    ui->LucBaseField->setValue(1);
 }
 
 void MainWindow::on_actionOpen_triggered() {
@@ -59,6 +73,9 @@ void MainWindow::on_actionSave_triggered() {
 }
 
 void MainWindow::on_actionSave_as_triggered() {
+    QString fileName = QFileDialog::getSaveFileName(this, "Save as");
+    QFile file(fileName);
+
 
 }
 
