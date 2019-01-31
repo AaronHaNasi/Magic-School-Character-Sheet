@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QInputDialog>
 
 namespace Ui {
 class MainWindow;
@@ -24,9 +25,20 @@ private:
     void on_actionAbout_triggered();
     void onactionAbout_qt_triggered();
 
+  //  void on_press_addCore_triggered();
+private slots:
+    void on_AddCoresButton_clicked();
+
+    void on_AddSpellButton_clicked();
+
+    //void on_addCoresButtonTest_clicked();
+
 private:
     Ui::MainWindow *ui;
     void createActions();
+    QString currentFile;
+    QDialog *core; //= new QDialog(0,0);
+    // QMouseEvent *click = new QMouseEvent(QEvent::MouseButtonPress)
 
 };
 

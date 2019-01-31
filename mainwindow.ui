@@ -321,17 +321,17 @@
      <string>Add Spell</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="CoresTableWidget">
     <property name="geometry">
      <rect>
       <x>670</x>
       <y>0</y>
-      <width>256</width>
+      <width>191</width>
       <height>192</height>
      </rect>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget_2">
+   <widget class="QTableWidget" name="SpellsTableWidget">
     <property name="geometry">
      <rect>
       <x>1040</x>
@@ -780,7 +780,7 @@
      <string>Notes</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="NotesEdit">
     <property name="geometry">
      <rect>
       <x>623</x>
@@ -806,7 +806,7 @@
      <number>4</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="rollButton">
     <property name="geometry">
      <rect>
       <x>1540</x>
@@ -855,7 +855,7 @@
      <string>Used</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="UseActionCheckBox">
     <property name="geometry">
      <rect>
       <x>1430</x>
@@ -867,8 +867,11 @@
     <property name="text">
      <string>Use Action?</string>
     </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
    </widget>
-   <widget class="QLabel" name="label_21">
+   <widget class="QLabel" name="ResultLabel">
     <property name="geometry">
      <rect>
       <x>1640</x>
@@ -972,7 +975,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget_3">
+   <widget class="QTableWidget" name="PerksTableWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -982,7 +985,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget_4">
+   <widget class="QTableWidget" name="ObsessionsTableWidget">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -992,7 +995,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget_5">
+   <widget class="QTableWidget" name="BlessingsTableWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -1002,7 +1005,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableView" name="InventoryTableWidget">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -1106,7 +1109,7 @@
      <string>Current Day/Week</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="CurrentWeekField">
     <property name="geometry">
      <rect>
       <x>1450</x>
@@ -1250,7 +1253,7 @@
      <x>0</x>
      <y>0</y>
      <width>1919</width>
-     <height>30</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
