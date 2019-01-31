@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'mainwindowmFTMbc.ui'
+** Form generated from reading UI file 'mainwindowcvzFgZ.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.12.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef MAINWINDOWMFTMBC_H
-#define MAINWINDOWMFTMBC_H
+#ifndef MAINWINDOWCVZFGZ_H
+#define MAINWINDOWCVZFGZ_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -65,8 +65,8 @@ public:
     QPushButton *AddCoresButton;
     QLabel *label_9;
     QPushButton *AddSpellButton;
-    QTableWidget *tableWidget;
-    QTableWidget *tableWidget_2;
+    QTableWidget *CoresTableWidget;
+    QTableWidget *SpellsTableWidget;
     QLabel *label_10;
     QLabel *label_11;
     QLabel *label_12;
@@ -104,14 +104,14 @@ public:
     QSpinBox *AgiField;
     QSpinBox *LucField;
     QLabel *label_18;
-    QTextEdit *textEdit;
+    QTextEdit *NotesEdit;
     QSpinBox *TotalActionsField;
-    QPushButton *pushButton;
+    QPushButton *rollButton;
     QSpinBox *UsedActionsField;
     QLabel *label_19;
     QLabel *label_20;
-    QCheckBox *checkBox;
-    QLabel *label_21;
+    QCheckBox *UseActionCheckBox;
+    QLabel *ResultLabel;
     QCheckBox *checkBox_2;
     QCheckBox *checkBox_3;
     QCheckBox *checkBox_4;
@@ -119,10 +119,10 @@ public:
     QCheckBox *checkBox_6;
     QCheckBox *checkBox_7;
     QCheckBox *checkBox_8;
-    QTableWidget *tableWidget_3;
-    QTableWidget *tableWidget_4;
-    QTableWidget *tableWidget_5;
-    QTableView *tableView;
+    QTableWidget *PerksTableWidget;
+    QTableWidget *ObsessionsTableWidget;
+    QTableWidget *BlessingsTableWidget;
+    QTableView *InventoryTableWidget;
     QLabel *label_22;
     QLabel *label_23;
     QLabel *label_24;
@@ -130,7 +130,7 @@ public:
     QLabel *label_25;
     QSpinBox *CurrentDayField;
     QLabel *label_26;
-    QSpinBox *spinBox;
+    QSpinBox *CurrentWeekField;
     QSpinBox *TotalDaysField;
     QLabel *label_27;
     QLabel *label_28;
@@ -244,12 +244,12 @@ public:
         AddSpellButton = new QPushButton(centralwidget);
         AddSpellButton->setObjectName(QString::fromUtf8("AddSpellButton"));
         AddSpellButton->setGeometry(QRect(950, 20, 88, 34));
-        tableWidget = new QTableWidget(centralwidget);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(670, 0, 256, 192));
-        tableWidget_2 = new QTableWidget(centralwidget);
-        tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(1040, 0, 256, 192));
+        CoresTableWidget = new QTableWidget(centralwidget);
+        CoresTableWidget->setObjectName(QString::fromUtf8("CoresTableWidget"));
+        CoresTableWidget->setGeometry(QRect(670, 0, 256, 192));
+        SpellsTableWidget = new QTableWidget(centralwidget);
+        SpellsTableWidget->setObjectName(QString::fromUtf8("SpellsTableWidget"));
+        SpellsTableWidget->setGeometry(QRect(1040, 0, 256, 192));
         label_10 = new QLabel(centralwidget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
         label_10->setGeometry(QRect(1350, 0, 58, 18));
@@ -375,17 +375,17 @@ public:
         label_18 = new QLabel(centralwidget);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setGeometry(QRect(960, 270, 58, 18));
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(623, 300, 741, 511));
+        NotesEdit = new QTextEdit(centralwidget);
+        NotesEdit->setObjectName(QString::fromUtf8("NotesEdit"));
+        NotesEdit->setGeometry(QRect(623, 300, 741, 511));
         TotalActionsField = new QSpinBox(centralwidget);
         TotalActionsField->setObjectName(QString::fromUtf8("TotalActionsField"));
         TotalActionsField->setGeometry(QRect(1400, 440, 52, 32));
         TotalActionsField->setMinimum(1);
         TotalActionsField->setValue(4);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(1540, 710, 88, 34));
+        rollButton = new QPushButton(centralwidget);
+        rollButton->setObjectName(QString::fromUtf8("rollButton"));
+        rollButton->setGeometry(QRect(1540, 710, 88, 34));
         UsedActionsField = new QSpinBox(centralwidget);
         UsedActionsField->setObjectName(QString::fromUtf8("UsedActionsField"));
         UsedActionsField->setGeometry(QRect(1490, 440, 52, 32));
@@ -395,12 +395,13 @@ public:
         label_20 = new QLabel(centralwidget);
         label_20->setObjectName(QString::fromUtf8("label_20"));
         label_20->setGeometry(QRect(1490, 410, 58, 18));
-        checkBox = new QCheckBox(centralwidget);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
-        checkBox->setGeometry(QRect(1430, 720, 111, 22));
-        label_21 = new QLabel(centralwidget);
-        label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(1640, 720, 58, 18));
+        UseActionCheckBox = new QCheckBox(centralwidget);
+        UseActionCheckBox->setObjectName(QString::fromUtf8("UseActionCheckBox"));
+        UseActionCheckBox->setGeometry(QRect(1430, 720, 111, 22));
+        UseActionCheckBox->setTristate(false);
+        ResultLabel = new QLabel(centralwidget);
+        ResultLabel->setObjectName(QString::fromUtf8("ResultLabel"));
+        ResultLabel->setGeometry(QRect(1640, 720, 58, 18));
         checkBox_2 = new QCheckBox(centralwidget);
         checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
         checkBox_2->setGeometry(QRect(1590, 20, 111, 22));
@@ -422,18 +423,18 @@ public:
         checkBox_8 = new QCheckBox(centralwidget);
         checkBox_8->setObjectName(QString::fromUtf8("checkBox_8"));
         checkBox_8->setGeometry(QRect(1590, 320, 111, 22));
-        tableWidget_3 = new QTableWidget(centralwidget);
-        tableWidget_3->setObjectName(QString::fromUtf8("tableWidget_3"));
-        tableWidget_3->setGeometry(QRect(0, 310, 256, 192));
-        tableWidget_4 = new QTableWidget(centralwidget);
-        tableWidget_4->setObjectName(QString::fromUtf8("tableWidget_4"));
-        tableWidget_4->setGeometry(QRect(270, 310, 256, 192));
-        tableWidget_5 = new QTableWidget(centralwidget);
-        tableWidget_5->setObjectName(QString::fromUtf8("tableWidget_5"));
-        tableWidget_5->setGeometry(QRect(0, 550, 256, 192));
-        tableView = new QTableView(centralwidget);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(270, 550, 256, 192));
+        PerksTableWidget = new QTableWidget(centralwidget);
+        PerksTableWidget->setObjectName(QString::fromUtf8("PerksTableWidget"));
+        PerksTableWidget->setGeometry(QRect(0, 310, 256, 192));
+        ObsessionsTableWidget = new QTableWidget(centralwidget);
+        ObsessionsTableWidget->setObjectName(QString::fromUtf8("ObsessionsTableWidget"));
+        ObsessionsTableWidget->setGeometry(QRect(270, 310, 256, 192));
+        BlessingsTableWidget = new QTableWidget(centralwidget);
+        BlessingsTableWidget->setObjectName(QString::fromUtf8("BlessingsTableWidget"));
+        BlessingsTableWidget->setGeometry(QRect(0, 550, 256, 192));
+        InventoryTableWidget = new QTableView(centralwidget);
+        InventoryTableWidget->setObjectName(QString::fromUtf8("InventoryTableWidget"));
+        InventoryTableWidget->setGeometry(QRect(270, 550, 256, 192));
         label_22 = new QLabel(centralwidget);
         label_22->setObjectName(QString::fromUtf8("label_22"));
         label_22->setGeometry(QRect(110, 280, 58, 18));
@@ -457,11 +458,11 @@ public:
         label_26 = new QLabel(centralwidget);
         label_26->setObjectName(QString::fromUtf8("label_26"));
         label_26->setGeometry(QRect(1400, 490, 121, 18));
-        spinBox = new QSpinBox(centralwidget);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setGeometry(QRect(1450, 510, 52, 32));
-        spinBox->setMinimum(1);
-        spinBox->setMaximum(1000);
+        CurrentWeekField = new QSpinBox(centralwidget);
+        CurrentWeekField->setObjectName(QString::fromUtf8("CurrentWeekField"));
+        CurrentWeekField->setGeometry(QRect(1450, 510, 52, 32));
+        CurrentWeekField->setMinimum(1);
+        CurrentWeekField->setMaximum(1000);
         TotalDaysField = new QSpinBox(centralwidget);
         TotalDaysField->setObjectName(QString::fromUtf8("TotalDaysField"));
         TotalDaysField->setGeometry(QRect(1430, 570, 52, 32));
@@ -559,11 +560,11 @@ public:
         label_16->setText(QApplication::translate("MainWindow", "AGI", nullptr));
         label_17->setText(QApplication::translate("MainWindow", "LUC", nullptr));
         label_18->setText(QApplication::translate("MainWindow", "Notes", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "Roll", nullptr));
+        rollButton->setText(QApplication::translate("MainWindow", "Roll", nullptr));
         label_19->setText(QApplication::translate("MainWindow", "Actions", nullptr));
         label_20->setText(QApplication::translate("MainWindow", "Used", nullptr));
-        checkBox->setText(QApplication::translate("MainWindow", "Use Action?", nullptr));
-        label_21->setText(QApplication::translate("MainWindow", "Result: ", nullptr));
+        UseActionCheckBox->setText(QApplication::translate("MainWindow", "Use Action?", nullptr));
+        ResultLabel->setText(QApplication::translate("MainWindow", "Result: ", nullptr));
         checkBox_2->setText(QApplication::translate("MainWindow", "Use in Roll", nullptr));
         checkBox_3->setText(QApplication::translate("MainWindow", "Use in Roll", nullptr));
         checkBox_4->setText(QApplication::translate("MainWindow", "Use in Roll", nullptr));
@@ -594,4 +595,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // MAINWINDOWMFTMBC_H
+#endif // MAINWINDOWCVZFGZ_H
