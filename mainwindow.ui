@@ -884,7 +884,7 @@
      <string>Result: </string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_2">
+   <widget class="QCheckBox" name="UseStr">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -897,7 +897,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_3">
+   <widget class="QCheckBox" name="UsePer">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -910,7 +910,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_4">
+   <widget class="QCheckBox" name="UseEnd">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -923,7 +923,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_5">
+   <widget class="QCheckBox" name="UseCha">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -936,7 +936,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_6">
+   <widget class="QCheckBox" name="UseInt">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -949,7 +949,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_7">
+   <widget class="QCheckBox" name="UseAgi">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -962,7 +962,7 @@
      <string>Use in Roll</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_8">
+   <widget class="QCheckBox" name="UseLuc">
     <property name="geometry">
      <rect>
       <x>1590</x>
@@ -1253,7 +1253,7 @@
      <x>0</x>
      <y>0</y>
      <width>1919</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

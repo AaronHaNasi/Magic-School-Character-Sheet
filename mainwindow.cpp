@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "ui_CoresDialog.h"
-#include "coredialog.h"
+//#include "ui_CoresDialog.h"
+//#include "coredialog.h"
 #include <QDialog>
 #include <QFile>
 #include <QFileDialog>
@@ -152,6 +152,12 @@ void MainWindow::on_actionSave_as_triggered() {
     j["spellstat"]["favor"] = QFavor.toUtf8().constData();
 
     j["stats"]["base"]["strength"] = ui->StrBaseField->value();
+    j["stats"]["base"]["perception"] = ui->PerBaseField->value();
+    j["stats"]["base"]["endurance"] = ui->EndBaseField->value();
+    j["stats"]["base"]["charisma"] = ui->ChaBaseField->value();
+    j["stats"]["base"]["intelligence"] = ui->IntBaseField->value();
+    j["stats"]["base"]["agility"] = ui->AgiBaseField->value();
+    j["statss"]["base"]["luck"] = ui->LucBaseField->value();
 
     // TODO Figure out how to output cores to JSON file
 
@@ -221,3 +227,12 @@ void MainWindow::on_AddSpellButton_clicked()
     i++;
 }
 */
+
+void MainWindow::on_rollButton_clicked()
+{
+    std::srand(time(0));
+    int roll = (rand() % 6 + 1) + (rand() % 6 + 1);
+    if(ui->UseStr->)
+    QString resultString = "Result: " + QString::number(roll);
+    ui->ResultLabel->setText(resultString);
+}
